@@ -52,7 +52,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          To get started, edit <code>src/App.js</code> and save to <a href='/ownerProfile'>reload</a>.
         </p>
         <BootstrapTable data={parsedTeams} options={[]} striped bordered hover>
           <TableHeaderColumn dataField='teamId' isKey>#</TableHeaderColumn>
@@ -63,29 +63,6 @@ class App extends Component {
           <TableHeaderColumn dataField='pointsFor' dataSort>Points For</TableHeaderColumn>
           <TableHeaderColumn dataField='pointsAgainst' dataSort>Points Against</TableHeaderColumn>
         </BootstrapTable>
-        {/* <BootstrapTable striped bordered hover>
-          <TableHeaderColumn>#</TableHeaderColumn>
-          <TableHeaderColumn>Team Name</TableHeaderColumn>
-          <TableHeaderColumn>Owner</TableHeaderColumn>
-          <TableHeaderColumn>Wins</TableHeaderColumn>
-          <TableHeaderColumn>Losses</TableHeaderColumn>
-          <TableHeaderColumn>Points For</TableHeaderColumn>
-          <TableHeaderColumn>Points Against</TableHeaderColumn>
-          {teams.map(({teamLocation, teamNickname, teamId, owners, record: {overallLosses, overallWins, pointsAgainst, pointsFor}}) => {
-            const {firstName, lastName} = owners.slice(-1)[0];
-            return (
-              <tr>
-                <TableHeaderColumn>{teamId}</TableHeaderColumn>
-                <TableHeaderColumn>{`${teamLocation} ${teamNickname}`}</TableHeaderColumn>
-                <TableHeaderColumn>{`${firstName} ${lastName}`}</TableHeaderColumn>
-                <TableHeaderColumn>{overallWins}</TableHeaderColumn>
-                <TableHeaderColumn>{overallLosses}</TableHeaderColumn>
-                <TableHeaderColumn>{pointsFor}</TableHeaderColumn>
-                <TableHeaderColumn>{pointsAgainst}</TableHeaderColumn>
-              </tr>
-            )
-          })}
-        </BootstrapTable> */}
       </div>
     );
   }
